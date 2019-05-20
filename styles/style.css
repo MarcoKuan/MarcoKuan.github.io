@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: 'Roboto';
   font-size: 13px;
@@ -7,8 +11,8 @@ body {
   background-color: rgba(79, 89, 79, 0.493);
 }
 
-a {
-  text-decoration: none;
+img {
+  width: 100%;
 }
 
 .contacts {
