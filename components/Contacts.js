@@ -21,6 +21,11 @@ class Contacts extends HTMLElement {
     imgObj.setAttribute("src", img);
     imgObj.setAttribute("id", "contactImg");
 
+    // New line the image and text
+    // Make the link connect to the picture
+    linkObj.appendChild(breakObj);
+    linkObj.appendChild(imgObj);
+
     // Create the CSS style
     const cssObj = document.createElement("link");
     cssObj.setAttribute("rel", "stylesheet");
@@ -29,8 +34,6 @@ class Contacts extends HTMLElement {
     // Append the objects into the div object
     divObj.appendChild(cssObj);
     divObj.appendChild(linkObj);
-    divObj.appendChild(breakObj)
-    divObj.appendChild(imgObj);
 
     // Push the div object into the shadow root
     shadRoot.appendChild(divObj);
