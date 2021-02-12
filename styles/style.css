@@ -1,25 +1,198 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+/** Font */
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
 
-a {
-  text-decoration: none;
-}
-
+/** Dark Theme CSS */
+/** Credits to gkroon */
+/** Source: https://github.com/gkroon/dracula-css */
+html,
 body {
-  font-family: 'Roboto';
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.959);
-  background-color: rgba(79, 89, 79, 0.493);
+  background-image: none !important;
+  background-color: rgba(40, 42, 54, 1) !important;
 }
 
-img {
-  width: 100%;
+body * {
+  color: rgba(248, 248, 242, 1) !important;
+  background-color: rgba(40, 42, 54, 1) !important;
 }
 
-.contacts {
+a,
+a * {
+  color: rgba(80, 250, 123, 1) !important;
+  background-color: transparent !important;
+}
+
+a:hover,
+a:hover *,
+a:visited:hover,
+a:visited:hover *,
+span[onclick]:hover,
+div[onclick]:hover,
+[role="link"]:hover,
+[role="link"]:hover *,
+[role="button"]:hover *,
+[role="menuitem"]:hover,
+[role="menuitem"]:hover *,
+.link:hover,
+.link:hover * {
+  color: rgba(241, 250, 140, 1) !important;
+}
+
+a:visited,
+a:visited * {
+  color: rgba(98, 114, 164, 1) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+[id*="headline"],
+[class*="headline"],
+[id*="header"],
+[class*="header"],
+[class*="header"] td {
+  color: rgba(255, 184, 108, 1) !important;
+}
+
+table {
+  background-color: rgba(40, 42, 54, 1) !important;
+}
+
+[id*="overlay"],
+[id*="lightbox"],
+blockquote {
+  background-color: rgba(68, 71, 90, 1) !important;
+}
+
+pre,
+dl {
+  background-color: rgba(68, 71, 90, 1) !important;
+}
+
+input,
+select,
+button,
+[role="button"],
+a.button,
+a.submit,
+a.BigButton,
+a.TabLink,
+.install[onclick] {
+  text-indent: 5px;
+  appearance: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  background: rgba(68, 71, 90, 1) !important;
+}
+
+textarea {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  background: rgba(68, 71, 90, 1) !important;
+}
+
+ul,
+li {
+  background-image: none !important;
+}
+
+a.highlight,
+a.highlight *,
+a.active,
+a.active *,
+.selected,
+.selected *,
+[href="#"] {
+  font-weight: bold !important;
+  color: rgba(139, 233, 253, 1) !important;
+}
+
+/** Flipping Animation */
+/** Credits to David Walsh */
+/** Source: https://davidwalsh.name/css-flip */
+.flip-container {
+  perspective: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 320px;
+  height: 200px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+
+/** Custom CSS */
+#profPic {
+  width: auto;
+  height: 200px;
+  margin: auto;
+  display: block;
+}
+
+#contactImg {
+  width: 100px;
   text-align: center;
 }
 
-.contacts img {
-  width: 50px;
-  height: 50px;
+#centerText {
+  text-align: center;
+}
+
+/** Contacts */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  justify-items: center;
+  text-align: center;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 0;
+  font-size: 20px;
 }

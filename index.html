@@ -4,63 +4,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="author" content="Marco Kuan">
-  <meta name="description" content="This is a portfolio website that gives a small introduction to who 
-I am and what I study.">
+  <meta name="description" content="This is a portfolio website that gives 
+    a small introduction to who I am and what I study.">
   <meta property="og:image"
     content="https://raw.githubusercontent.com/MarcoKuan/MarcoKuan.github.io/master/images/Marco.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="turtle-icon.png">
+  <link rel="shortcut icon" href="/images/ucsd.png">
   <link rel="stylesheet" href="styles/style.css">
   <title>Marco's Website</title>
 </head>
 
-<!--Main Body-->
-
 <body>
-
   <h1 style="text-align: center">
     Marco Kuan
   </h1>
 
   <!--Introuction-->
-  <p>
-    <div style="text-align: center">
-      <img src="images/Marco.jpg" style="width:180px; height:240px;"
-        alt="An image of me">
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+    <div class="flipper">
+      <div class="front">
+        <img src="images/marco.png" id="profPic">
+      </div>
+      <div class="back">
+        <img src="images/ucsd.png" id="profPic">
+      </div>
     </div>
-  </p>
+  </div>
 
-  <p>
-    <h3>Who Am I?</h3>
-    I am a student at the University of California, San Diego studying Computer.
-    Science.
-    <br>
-    <t></t>
-  </p>
+  <div id="centerText">
+    <!--About me-->
+    <h1>About Me</h1>
+    <p>
+      I am a currently a senior at the University of California, San Diego,
+      studying Computer Science. I am from San Francisco, California, but came
+      all the way to San Diego to enjoy the great weather. I enjoy UCSD's
+      courses because they are challenging, but also teach me many things. On
+      my free time, I like to solve puzzles like the Rubik's Cube or doing
+      Capture the Flag problems.
+    </p>
+
+    <!--School Information and Computer Science Skills-->
+    <div class="grid-container" style="text-align: left;">
+      <div>
+        <!--Programming Languages-->
+        <h3>Programming Languages</h3>
+        <ul>
+          <li>Java</li>
+          <li>Python</li>
+          <li>C++</li>
+          <li>C</li>
+        </ul>
+      </div>
+
+      <!--Skills-->
+      <div>
+        <h3>Skills</h3>
+        <ul>
+          <li>Data Structures</li>
+          <li>Algorithms</li>
+          <li>Agile</li>
+        </ul>
+      </div>
+
+      <!--School Information-->
+      <div>
+        <h3>School</h3>
+        <ul>
+          <li>Major: Computer Science</li>
+          <li>GPA: 3.84</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 
   <hr>
   <!--Contact Details-->
-  <p>
-    <div class="contacts">
-      <h2>Contacts</h2>
+  <div id=" centerText">
+    <h2>Contacts</h2>
+    <p>
+      If you would like to contact me, please refer to the links below.
+      It is easier to contact me through my email because I check on it daily.
+    </p>
+  </div>
 
-      <!--Centered Contact details with images-->
-      <a href="https://www.linkedin.com/in/marco-kuan-211079148"
-        target="_blank">
-        <img src="images/LinkedIn.png">
-      </a>
+  <!--Output the contact information through JS-->
+  <div class="grid-container" id="contact-info"></div>
 
-      <a href="https://github.com/MarcoKuan" target="_blank">
-        <img src="images/github.png">
-      </a>
-
-      <a href="mailto:kuan.n.marco@gmail.com" target="_blank">
-        <img src="images/Gmail.png">
-      </a>
-    </div>
-
-  </p>
-
+  <!--Run the scripts necessary for loading the website information-->
+  <script src="./components/Contacts.js"></script>
+  <script src="./scripts/scripts.js"></script>
 </body>
 
 </html>
